@@ -1,6 +1,3 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-
 import java.util.Scanner;// импорт сканера
 
 public class Main {
@@ -33,7 +30,7 @@ public class Main {
         }
         // прверяем наличие одного из четырех знаков математической операции
         // через регулярное выражение
-        if (!line.trim().matches(".*[+\\-*\\/].*")) {
+        if (!line.trim().matches(".*[+\\-*/].*")) {
             throw new Exception("Не обнаружен знак математической операции.");
         }
         // делим входную строку на части по пробелу
@@ -46,7 +43,7 @@ public class Main {
         // Пытаемся преобразовать значение строки в целое число
         // И если не получается, выбрасываем ошибку
         try {
-            // первая часть( номерация с 0)- это первый операнд
+            // первая часть (нумерация с 0) - это первый операнд
             a = Integer.parseInt(parts[0].trim());
         } catch (NumberFormatException e) {
             System.out.println("Эта строка не является целым числом.");
